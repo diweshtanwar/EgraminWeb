@@ -1,0 +1,30 @@
+﻿@model EgraminWeb.Models.tblLatestNew
+@{
+
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="news py-5">
+    <div class="container">
+        <div class="title mb-4 ">
+            <h3>Latest News &amp; <span>Announcements</span></h3>
+        </div>
+        <div class="row">
+            <div class="col-md-8 ">
+                <h4 class="text-primary mb-4"><strong>  @Html.DisplayFor(model => model.NewsSubject)</strong></h4>
+                <img src="@Url.Content(@Html.DisplayFor(model => model.NewsImagePath).ToString())" class="w-100 mb-4" alt="...">
+                <p>@Html.DisplayFor(model => model.NewsDetails)</p>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="title">
+                    <h5 class="mb-4">More News &amp; <span> Announcements</span></h5>
+                </div>
+                @{ Html.RenderAction("GetSubNewsForNewsDetails", "Partial"); }
+                <a href="@Url.Action("NewsAll","Home")" class="links">View more</a>
+            </div>
+        </div>   
+    </div>
+</div>
+<!--end of news-->

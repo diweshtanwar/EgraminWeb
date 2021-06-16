@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EgraminWeb.Models.tblGalleryCategory>
+
+@{
+
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="downloads py-5">
+    <div class="container">
+        <div class="title mb-5">
+            <h3> Photo <span> Gallery</span></h3>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+            <div class="col-md-3">
+                <a href="@Url.Action("GalleryImages", new { id=item.Id })">
+                    @{ Html.RenderAction("GetGalleryImagesForTittle", "Partial", new { id = item.Id }); }
+                    <h6 class="text-center"><strong>  @Html.DisplayFor(modelItem => item.CategoryTittle)</strong></h6>
+                </a>
+            </div>
+               
+            }
+        </div>
+    </div>
+</div>
+<!--end of downloads-->

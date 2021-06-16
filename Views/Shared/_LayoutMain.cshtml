@@ -1,0 +1,239 @@
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>eGramin</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    @Styles.Render("~/Content/EgraminAssets/assets/css/bootstrap.min.css")
+    @Styles.Render("~/Content/EgraminAssets/assets/css/font-awesome.min.css")
+    @Styles.Render("~/Content/EgraminAssets/assets/css/style.css")
+    @*<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">*@
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6 col-6 d-none d-xl-block d-lg-block">
+                    <p class="mail-text mb-0">Welcome to egramin</p>
+
+                </div>
+                <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12 col-12 text-right">
+                    <div class="top-nav">
+                        <span class="top-text"><a href="mailto:help@egramin.com">help@egramin.com</a></span>
+                        <span class="top-text"><a href="tel:+97158-5802930">1800-xxx-xxxx</a></span>
+                        <span class="top-text blinker">@Html.ActionLink("Find a Branch", "FindBranch", "Home") </span>
+                        <span class="top-text">@Html.ActionLink("Careers", "Careers", "Home")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of top-bar -->
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12 px-xl-0 ">
+                    <!-- logo -->
+                    <div class="logo text-center text-lg-left">
+                        <a href="/Home/Index"><img src="~/Content/EgraminAssets/assets/images/e-gramin-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
+                    <div id="navigation">
+                        <!-- navigation start-->
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>
+                                <a href="#" class="nav-link">About us</a>
+                                <ul>
+                                    <li>@Html.ActionLink("About Company", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Our Vision", "OurVision", "Home")</li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">Services</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="nav-link">General Insurance</a>
+                                        <ul>
+                                            <li><a href="https://www.sbigeneral.in/" target="_blank" class="nav-link">SBI General</a></li>
+                                            <li><a href="https://www.hdfcergo.com/" target="_blank" class="nav-link">HDFC Agro</a></li>
+                                            <li><a href="https://www.icicilombard.com/" target="_blank" class="nav-link">ICICI Lombard</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="nav-link">Life Insurance</a>
+                                        <ul>
+                                            <li><a href="https://licindia.in/" target="_blank" class="nav-link">LIC</a></li>
+                                            <li><a href="https://www.sbilife.co.in/" target="_blank" class="nav-link">SBI Life </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link">Health Insurance</a>
+                                        <ul>
+                                            <li><a href="https://www.careinsurance.com/" target="_blank" class="nav-link">Care Health Insurance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link">Banking</a>
+                                        <ul>
+                                            <li><a href="https://kiosk.onlinesbi.com/" target="_blank" class="nav-link">SBI Kiosk Banking</a></li>
+                                            <li><a href="https://cedgenetbanking.in/APRB/" target="_blank" class="nav-link">Arunachal Rural Bank</a></li>
+
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Gallery", "GalleryCategories", "Home")</li>
+
+                            <li>@Html.ActionLink("Downloads", "Downloads", "Home")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>                       
+                            <li><a href="#" class="btn btn-warning py-2 mt-lg-2">Sign In</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- /.navigation end-->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--end of header-->
+
+    <div class="notification">
+        <div class="container p-2">
+            <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                  @{ Html.RenderAction("GetNotification", "Partial"); }              
+            </marquee>
+        </div>
+    </div>
+    <!--end of notification-->
+         
+
+    @RenderBody()
+   
+
+    <footer class="bg-default footer pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6>Our Company</h6>
+                    <ul>
+                        @*<li><a href="index.html">Home</a></li>*@
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                        <li>@Html.ActionLink("Gallery", "GalleryCategories", "Home")</li>
+                        <li>@Html.ActionLink("Downloads", "Downloads", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                        <li>@Html.ActionLink("Find a Branch", "FindBranch", "Home")</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Our Service's</h6>
+                    <ul>
+                        <li><a href="">Banking</a></li>
+                        <li><a href="">General Insurance</a></li>
+                        <li><a href="">Life Insurance</a></li>
+                        <li><a href="">Health Insurance</a></li>
+                        <li><a href="">POS</a></li>
+                        <li><a href="">Others</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h6>Reach Us</h6>
+                    <div class="d-flex mb-3">
+                        <span class="mr-2"><i class="fa fa-home"></i></span>
+                        <span>Dispur, New Street, Assam, 7883883</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <span class="mr-2"><i class="fa fa-envelope"></i></span>
+                        <span>help@egramin.com</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <span class="mr-2"><i class="fa fa-phone"></i></span>
+                        <span>1800-xxx-xxx</span>
+                    </div>
+                    <div class="d-flex mb-3 social">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-2">
+            <div class="d-flex justify-content-between">
+                <span>&copy; All Right Reserved.eGramin</span>
+                <div>
+                    <a href="#">Terms of Use</a> /
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- new-detail -->
+    <div class="modal fade" id="newsdetail" tabindex="-1" aria-labelledby="new-detailLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body p-4">                  
+                    @{ Html.RenderAction("GetNotificationDetails", "Partial"); }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning px-4 text-white" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="assets/js/menumaker.js"></script>*@
+
+    @Scripts.Render("~/Content/EgraminAssets/assets/js/jquery-3.5.1.slim.min.js")
+    @Scripts.Render("~/Content/EgraminAssets/assets/js/bootstrap.bundle.min.js")
+    @Scripts.Render("~/Content/EgraminAssets/assets/js/menumaker.js")
+    @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            $('marquee').mouseover(function () {
+                $(this).attr('scrollamount', 0);
+            }).mouseout(function () {
+                $(this).attr('scrollamount', 5);
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

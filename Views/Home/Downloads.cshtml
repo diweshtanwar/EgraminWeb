@@ -1,0 +1,77 @@
+﻿@model IEnumerable<EgraminWeb.Models.tblDownloadDetail>
+@{
+
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="downloads py-5">
+    <div class="container">
+        <div class="title mb-3">
+            <h3> Downloads</h3>
+        </div>
+
+        <table class="table border">
+            <thead class="text-primary">
+                <tr>
+                    <th>Document Name</th>
+                    <th>Description</th>
+                    <th>created Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.DocumentName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CreatedDate)</td>                    
+                    <td>
+                        @Html.ActionLink("Download", "DownloadFile", new { fileName = item.DocumentPath }, new { @class = "btn btn-outline-warning btn-sm" })
+                </td>                
+                </tr>
+                }
+                @*<tr>
+                    <td>Banking Software</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>
+                <tr>
+                    <td>BC-CSP Agreement</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>
+                <tr>
+                    <td>SUB-KO Agreement</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>
+                <tr>
+                    <td>POS Applications forms</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>
+                <tr>
+                    <td>BC Remurance Chart</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Others</td>
+                    <td>lorem ipsum is simply dummy text</td>
+                    <td>10/12/2020</td>
+                    <td><a href="" class="btn btn-outline-warning btn-sm">Download</a></td>
+                </tr>*@
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+<!--end of downloads-->

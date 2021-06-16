@@ -1,0 +1,21 @@
+﻿
+@{
+    /**/
+
+    Layout = null;
+}
+
+@*<a href="gallery-images.html">*@
+    <div class="image-categories">
+        <div class="row">
+            @foreach (var item in ViewBag.ImgesListWithPath)
+            {
+                <div class="col-md-6 p-1">
+                    <img src="@Url.Content(item)">
+                </div>          
+            }
+            </div>
+    </div>
+@*</a>*@
+
+

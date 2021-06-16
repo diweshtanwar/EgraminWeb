@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EgraminWeb.Models.tblLatestNew>
+@{
+                /**/
+
+                Layout = null;
+}
+
+
+@foreach (var item in Model)
+{   
+    
+    <div class="d-flex border p-2 mb-2">
+        <img src="@Url.Content(item.NewsImagePath)" class="w-25 mr-2">
+        <div><a href="@Url.Action("NewsDetails","Home", new { id=item.Id })">@Html.DisplayFor(modelItem => item.NewsSubject)</a></div>
+    </div>   
+   
+}

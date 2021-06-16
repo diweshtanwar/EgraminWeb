@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EgraminWeb.Models.tblLatestNew>
+@{
+
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="news py-5">
+    <div class="container">
+        <div class="title mb-4 ">
+            <h3>Latest News &amp; <span>Announcements</span></h3>
+        </div>
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-3 border-0">
+                        <img src="@Url.Content(item.NewsImagePath)" class="card-img-top" alt="...">
+                        <div class="card-body px-0">
+                            <h5 class="card-title">  @Html.DisplayFor(modelItem => item.NewsSubject)</h5>
+                            <p class="card-text">  @Html.DisplayFor(modelItem => item.NewsDetails)</p>
+                            <a href="@Url.Action("NewsDetails","Home", new { id=item.Id })" class="links">View more</a>
+                        </div>
+                    </div>
+                </div>               
+            }
+            </div>   
+    </div>
+
+</div>
+<!--end of news-->
